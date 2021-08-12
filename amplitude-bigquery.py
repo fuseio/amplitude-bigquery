@@ -5,7 +5,10 @@ import os
 import zipfile
 
 from datetime import datetime, timedelta
-from google.cloud import bigquery, storage
+from google.cloud import bigquery
+
+# gcloud supports both python 2 and 3. The storage is available only in gcloud.
+from gcloud import storage
 from os import walk
 
 ACCOUNT_ID = ''
