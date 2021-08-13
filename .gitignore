@@ -130,3 +130,7 @@ dmypy.json
 
 #Intellij .idea files
 .idea/
+
+#mac OS file
+*.DS_Store
+*.vscode
