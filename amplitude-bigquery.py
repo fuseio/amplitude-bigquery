@@ -6,16 +6,20 @@ import zipfile
 
 from datetime import datetime, timedelta
 from google.cloud import bigquery
+from dotenv import load_dotenv
 
 # gcloud supports both python 2 and 3. The storage is available only in gcloud.
 from gcloud import storage
 from os import walk
 
-ACCOUNT_ID = ''
-API_KEY = ''
-API_SECRET = ''
-PROJECT_ID = ''
-CLOUD_STORAGE_BUCKET = ''
+load_dotenv()
+
+ACCOUNT_ID = os.getenv('ACCOUNT_ID')
+API_KEY = os.getenv('API_KEY')
+API_SECRET = os.getenv('API_SECRET')
+PROJECT_ID = os.getenv('PROJECT_ID')
+CLOUD_STORAGE_BUCKET = os.getenv('CLOUD_STORAGE_BUCKET')
+
 PROPERTIES = ["event_properties", "data", "groups", "group_properties",
               "user_properties"]
 
